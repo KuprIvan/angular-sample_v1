@@ -9,6 +9,7 @@ import { ProductAlertsComponent } from './product-alerts/product-alerts.componen
 import { ProductDetailsComponent } from './product-details/product-details.component';
 import {RouterModule} from "@angular/router";
 import {ReactiveFormsModule} from "@angular/forms";
+import { CartComponent } from './cart/cart.component';
 
 @NgModule({
   imports: [
@@ -17,6 +18,7 @@ import {ReactiveFormsModule} from "@angular/forms";
     RouterModule.forRoot([
       { path: '', component: ProductListComponent },
       { path: 'products/:productId', component: ProductDetailsComponent },
+      { path: 'cart', component: CartComponent },
     ])
   ],
   declarations: [
@@ -25,6 +27,7 @@ import {ReactiveFormsModule} from "@angular/forms";
     ProductListComponent,
     ProductAlertsComponent,
     ProductDetailsComponent,
+    CartComponent,
   ],
   providers: [],
   bootstrap: [AppComponent]
