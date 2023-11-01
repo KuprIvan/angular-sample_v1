@@ -1,0 +1,9 @@
+<h3>Shipping Prices</h3>
+
+<div class="shipping-item" *ngFor="let shipping of shippingCosts | async">
+<!--  Async pipe возвращает последнее значение из потока данных
+и продолжает это делать в течение всего времени существования данного компонента.
+Когда Angular уничтожает этот компонент, работа async-трубы автоматически прекращается-->
+  <span>{{ shipping.type }}</span>
+  <span>{{ shipping.price | currency }}</span>
+</div>
